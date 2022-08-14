@@ -1,3 +1,15 @@
+Better Streaming Assets (Unity Package)
+--------------------------------
+
+To install, open `Package Manager` in Unity. Press + button and choose `Add package from git url...`. Then enter git address to this repository.
+```
+https://github.com/cathei/BetterStreamingAssets-Package.git
+```
+or for specific version, use tag.
+```
+https://github.com/cathei/BetterStreamingAssets-Package.git#1.0.0
+```
+
 README - Better Streaming Assets
 --------------------------------
 Many thanks for downloading!  Before getting your hands on the tool please have a read.
