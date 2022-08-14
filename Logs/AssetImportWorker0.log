@@ -1,0 +1,671 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/kkang/Develop/BetterStreamingAssets
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+51079
+Successfully changed project path to: /Users/kkang/Develop/BetterStreamingAssets
+/Users/kkang/Develop/BetterStreamingAssets
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 27.48 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.12f1 (b3b2c6512326)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/kkang/Develop/BetterStreamingAssets/Assets
+GfxDevice: creating device client; threaded=0
+2022-08-14 13:31:49.492 Unity[87889:7200461] (null) preferred device: Apple M1 Pro (high power)
+2022-08-14 13:31:49.492 Unity[87889:7200461] Metal devices available: 1
+2022-08-14 13:31:49.492 Unity[87889:7200461] 0: Apple M1 Pro (high power)
+2022-08-14 13:31:49.493 Unity[87889:7200461] Using device Apple M1 Pro (high power)
+Initializing Metal device caps: Apple M1 Pro
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56889
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.000358 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 26.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.675 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004246 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.547 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2020.3.12f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1393 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.5 MB.
+System memory in use after: 138.6 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1827.
+Total: 1.515750 ms (FindLiveObjects: 0.140250 ms CreateObjectMapping: 0.064375 ms MarkObjects: 1.237625 ms  DeleteObjects: 0.072666 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Plugins/BetterStreamingAssets
+  artifactKey: Guid(0a6710fb0ccc938478e4b78f89cc0eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets using Guid(0a6710fb0ccc938478e4b78f89cc0eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35b41231cd8d19d17659a091791249c0') in 0.005276 seconds 
+  Import took 0.007265 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000339 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BSA_TestScene.unity
+  artifactKey: Guid(2bef88fd675ce3f4fa61ff5f18aa8242) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BSA_TestScene.unity using Guid(2bef88fd675ce3f4fa61ff5f18aa8242) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2501f092fcd3fa5015f4b541f9545c7') in 0.013958 seconds 
+  Import took 0.015733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BetterStreamingAssets.asmdef
+  artifactKey: Guid(5e90fee04fdf7164fa71eeef34c6a431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BetterStreamingAssets.asmdef using Guid(5e90fee04fdf7164fa71eeef34c6a431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca3524169ebbf0bd049bfd54e3b15b7d') in 0.074022 seconds 
+  Import took 0.075683 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001108 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.421 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 142.7 MB.
+System memory in use after: 142.8 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1830.
+Total: 1.313750 ms (FindLiveObjects: 0.087042 ms CreateObjectMapping: 0.025958 ms MarkObjects: 1.176584 ms  DeleteObjects: 0.023333 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001007 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.392 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 142.9 MB.
+System memory in use after: 143.1 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1833.
+Total: 1.276167 ms (FindLiveObjects: 0.082375 ms CreateObjectMapping: 0.025458 ms MarkObjects: 1.154625 ms  DeleteObjects: 0.012917 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 42.818343 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BSA_TestSceneGUI.cs
+  artifactKey: Guid(e254ae11057fcdf4a894dcf319700de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BSA_TestSceneGUI.cs using Guid(e254ae11057fcdf4a894dcf319700de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40c4c29f60207dd3aba3e12207809fa0') in 0.166601 seconds 
+  Import took 0.168365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.035973 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BSA_TestSceneGUI.cs
+  artifactKey: Guid(e254ae11057fcdf4a894dcf319700de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BSA_TestSceneGUI.cs using Guid(e254ae11057fcdf4a894dcf319700de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40c4c29f60207dd3aba3e12207809fa0') in 0.000993 seconds 
+  Import took 0.002768 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.563172 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BSA_ZipArchive.cs
+  artifactKey: Guid(4ae0668083250b649a64c7836ec20f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BSA_ZipArchive.cs using Guid(4ae0668083250b649a64c7836ec20f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9113d3ed8b3cb1ddce5dc619753f248c') in 0.001921 seconds 
+  Import took 0.003789 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008824 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BSA_ZipArchive.cs
+  artifactKey: Guid(4ae0668083250b649a64c7836ec20f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BSA_ZipArchive.cs using Guid(4ae0668083250b649a64c7836ec20f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9113d3ed8b3cb1ddce5dc619753f248c') in 0.000879 seconds 
+  Import took 0.002519 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.840440 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BSA_SubReadOnlyStream.cs
+  artifactKey: Guid(23985058976064b4aa47f955e25b32fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BSA_SubReadOnlyStream.cs using Guid(23985058976064b4aa47f955e25b32fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '987603bf42ddc44614fceceb29fcf5dc') in 0.002380 seconds 
+  Import took 0.005696 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008941 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BSA_SubReadOnlyStream.cs
+  artifactKey: Guid(23985058976064b4aa47f955e25b32fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BSA_SubReadOnlyStream.cs using Guid(23985058976064b4aa47f955e25b32fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '987603bf42ddc44614fceceb29fcf5dc') in 0.001001 seconds 
+  Import took 0.003044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.132044 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BSA_PathUtil.cs
+  artifactKey: Guid(34f6b4de9962c114299b3b9bfdd590d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BSA_PathUtil.cs using Guid(34f6b4de9962c114299b3b9bfdd590d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a46cb97630fce1487b18552d49fce8d2') in 0.001261 seconds 
+  Import took 0.003191 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002382 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BSA_PathUtil.cs
+  artifactKey: Guid(34f6b4de9962c114299b3b9bfdd590d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BSA_PathUtil.cs using Guid(34f6b4de9962c114299b3b9bfdd590d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a46cb97630fce1487b18552d49fce8d2') in 0.000848 seconds 
+  Import took 0.002463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.172531 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BSA_BetterStreamingAssets.cs
+  artifactKey: Guid(12bc032fc47a6c34fb90f0f4a48f4441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BSA_BetterStreamingAssets.cs using Guid(12bc032fc47a6c34fb90f0f4a48f4441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fa281b1a34e136268403a829c6795c9') in 0.001259 seconds 
+  Import took 0.003315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002841 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BSA_BetterStreamingAssets.cs
+  artifactKey: Guid(12bc032fc47a6c34fb90f0f4a48f4441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BSA_BetterStreamingAssets.cs using Guid(12bc032fc47a6c34fb90f0f4a48f4441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fa281b1a34e136268403a829c6795c9') in 0.000875 seconds 
+  Import took 0.002622 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 187.148261 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/Editor
+  artifactKey: Guid(76a553c34bec62144ab8a01ecda96504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/Editor using Guid(76a553c34bec62144ab8a01ecda96504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff10b07b6d742ebe2301f8152decd910') in 0.000847 seconds 
+  Import took 0.003438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000432 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/Editor
+  artifactKey: Guid(76a553c34bec62144ab8a01ecda96504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/Editor using Guid(76a553c34bec62144ab8a01ecda96504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff10b07b6d742ebe2301f8152decd910') in 0.000504 seconds 
+  Import took 0.001969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.072286 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/Editor/BetterStreamingAssets-Editor.asmdef
+  artifactKey: Guid(64cecb873c544a94e923f75bffbdb295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/Editor/BetterStreamingAssets-Editor.asmdef using Guid(64cecb873c544a94e923f75bffbdb295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98d527c17f94741e431d522ddd747a01') in 0.002010 seconds 
+  Import took 0.003919 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.699096 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/Editor/BSA_BetterStreamingAssetsTests.cs
+  artifactKey: Guid(29241416ccb4d194989b9d874476f276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/Editor/BSA_BetterStreamingAssetsTests.cs using Guid(29241416ccb4d194989b9d874476f276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9016dd36523240ccc7bb1f93bc3f507f') in 0.001036 seconds 
+  Import took 0.002917 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002343 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/Editor/BSA_BetterStreamingAssetsTests.cs
+  artifactKey: Guid(29241416ccb4d194989b9d874476f276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/Editor/BSA_BetterStreamingAssetsTests.cs using Guid(29241416ccb4d194989b9d874476f276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9016dd36523240ccc7bb1f93bc3f507f') in 0.000857 seconds 
+  Import took 0.002502 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.887480 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/Editor/BSA_PathUtilTests.cs
+  artifactKey: Guid(74c1a053c8b0e6b4a9c19ada37f3a572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/Editor/BSA_PathUtilTests.cs using Guid(74c1a053c8b0e6b4a9c19ada37f3a572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '024d74f3802cc184a15f8660fc19e90c') in 0.000987 seconds 
+  Import took 0.002915 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002432 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/Editor/BSA_PathUtilTests.cs
+  artifactKey: Guid(74c1a053c8b0e6b4a9c19ada37f3a572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/Editor/BSA_PathUtilTests.cs using Guid(74c1a053c8b0e6b4a9c19ada37f3a572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '024d74f3802cc184a15f8660fc19e90c') in 0.000905 seconds 
+  Import took 0.002654 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001970 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.544 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.4 MB.
+System memory in use after: 147.5 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1832.
+Total: 1.419666 ms (FindLiveObjects: 0.118125 ms CreateObjectMapping: 0.030334 ms MarkObjects: 1.244250 ms  DeleteObjects: 0.026083 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 10.970820 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/Editor/BetterStreamingAssets-Editor 1.asmdef
+  artifactKey: Guid(205e508ce68b545979038a8851a06655) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/Editor/BetterStreamingAssets-Editor 1.asmdef using Guid(205e508ce68b545979038a8851a06655) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cc5dbe739404dffd1a94d89fbd7e734') in 0.004832 seconds 
+  Import took 0.006597 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.226597 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/Editor/BetterStreamingAssets-Editor 1.asmdef
+  artifactKey: Guid(205e508ce68b545979038a8851a06655) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/Editor/BetterStreamingAssets-Editor 1.asmdef using Guid(205e508ce68b545979038a8851a06655) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cc5dbe739404dffd1a94d89fbd7e734') in 0.001282 seconds 
+  Import took 0.003084 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002033 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.414 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.21 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.6 MB.
+System memory in use after: 147.7 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1835.
+Total: 1.286542 ms (FindLiveObjects: 0.087083 ms CreateObjectMapping: 0.026917 ms MarkObjects: 1.156083 ms  DeleteObjects: 0.015708 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 792.600940 seconds.
+  path: Packages/com.cathei.betterstreamingassets/package.json
+  artifactKey: Guid(1e89734474f7e4d7fa7167fbc220cb01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.cathei.betterstreamingassets/package.json using Guid(1e89734474f7e4d7fa7167fbc220cb01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b1c8d204713dea0af3c9716ac97c815') in 0.089565 seconds 
+  Import took 0.091825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.356375 seconds.
+  path: Packages/com.unity.ext.nunit/package.json
+  artifactKey: Guid(8143d3a8390f2c64685e3bc272bd9e90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ext.nunit/package.json using Guid(8143d3a8390f2c64685e3bc272bd9e90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36f449bd9ed4a92e06d659da724da745') in 0.003906 seconds 
+  Import took 0.006030 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.319373 seconds.
+  path: Packages/com.unity.ide.rider/package.json
+  artifactKey: Guid(66c95bb3c74257f41bae2622511dc02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ide.rider/package.json using Guid(66c95bb3c74257f41bae2622511dc02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff96f7b61e94a0dc9b975679be81ead9') in 0.005881 seconds 
+  Import took 0.009263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.346718 seconds.
+  path: Packages/com.cathei.betterstreamingassets/Runtime
+  artifactKey: Guid(89bc753a71211472587f0baa7a08d0e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.cathei.betterstreamingassets/Runtime using Guid(89bc753a71211472587f0baa7a08d0e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '151bebc3ee69ad3ef80721d61093a136') in 0.001394 seconds 
+  Import took 0.003136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000743 seconds.
+  path: Packages/com.cathei.betterstreamingassets/Runtime
+  artifactKey: Guid(89bc753a71211472587f0baa7a08d0e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.cathei.betterstreamingassets/Runtime using Guid(89bc753a71211472587f0baa7a08d0e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '151bebc3ee69ad3ef80721d61093a136') in 0.000487 seconds 
+  Import took 0.001918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.871285 seconds.
+  path: Packages/com.cathei.betterstreamingassets/Tests
+  artifactKey: Guid(892fe6fad27d3460893880cc32bb9fdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.cathei.betterstreamingassets/Tests using Guid(892fe6fad27d3460893880cc32bb9fdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bd5d3b9f6af4fa85b109a4c1ce363b7') in 0.001054 seconds 
+  Import took 0.002922 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002181 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.576 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.21 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 152.0 MB.
+System memory in use after: 152.1 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1838.
+Total: 1.304667 ms (FindLiveObjects: 0.087750 ms CreateObjectMapping: 0.029292 ms MarkObjects: 1.168750 ms  DeleteObjects: 0.016833 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002103 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.488 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.19 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 152.2 MB.
+System memory in use after: 152.3 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1839.
+Total: 1.183958 ms (FindLiveObjects: 0.075000 ms CreateObjectMapping: 0.025792 ms MarkObjects: 1.066291 ms  DeleteObjects: 0.016084 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 80.900112 seconds.
+  path: Packages/com.cathei.betterstreamingassets
+  artifactKey: Guid(0ca70354ae891077b6f6a55fc3d60207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.cathei.betterstreamingassets using Guid(0ca70354ae891077b6f6a55fc3d60207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e68fdd65af87650dca90e1384e951e1') in 0.003592 seconds 
+  Import took 0.004986 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.457947 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BetterStreamingAssets.Samples.asmdef
+  artifactKey: Guid(daf6fc762da2c474983e33057eec7490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BetterStreamingAssets.Samples.asmdef using Guid(daf6fc762da2c474983e33057eec7490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32c68742a86cf97bb180d5c86ce14d88') in 0.003069 seconds 
+  Import took 0.004982 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.153358 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BetterStreamingAssets.Samples.asmdef
+  artifactKey: Guid(daf6fc762da2c474983e33057eec7490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BetterStreamingAssets.Samples.asmdef using Guid(daf6fc762da2c474983e33057eec7490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32c68742a86cf97bb180d5c86ce14d88') in 0.002117 seconds 
+  Import took 0.003954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.402251 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BetterStreamingAssets.Samples.asmdef
+  artifactKey: Guid(daf6fc762da2c474983e33057eec7490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BetterStreamingAssets.Samples.asmdef using Guid(daf6fc762da2c474983e33057eec7490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19a96e6a7d7ceca40d53686d2319db0e') in 0.002287 seconds 
+  Import took 0.004257 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003141 seconds.
+  path: Assets/Plugins/BetterStreamingAssets/BetterStreamingAssets.Samples.asmdef
+  artifactKey: Guid(daf6fc762da2c474983e33057eec7490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BetterStreamingAssets/BetterStreamingAssets.Samples.asmdef using Guid(daf6fc762da2c474983e33057eec7490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19a96e6a7d7ceca40d53686d2319db0e') in 0.002238 seconds 
+  Import took 0.004019 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000963 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.542 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.28 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 152.4 MB.
+System memory in use after: 152.5 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1842.
+Total: 1.181375 ms (FindLiveObjects: 0.078125 ms CreateObjectMapping: 0.035250 ms MarkObjects: 1.049166 ms  DeleteObjects: 0.017875 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 13.451069 seconds.
+  path: Packages/com.unity.test-framework/UnityEngine.TestRunner/UnityEngine.TestRunner.asmdef
+  artifactKey: Guid(27619889b8ba8c24980f49ee34dbb44a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.test-framework/UnityEngine.TestRunner/UnityEngine.TestRunner.asmdef using Guid(27619889b8ba8c24980f49ee34dbb44a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cc72419ab1198df33673865af686382') in 0.007750 seconds 
+  Import took 0.009792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002161 seconds.
+  path: Packages/com.unity.test-framework/UnityEngine.TestRunner/UnityEngine.TestRunner.asmdef
+  artifactKey: Guid(27619889b8ba8c24980f49ee34dbb44a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.test-framework/UnityEngine.TestRunner/UnityEngine.TestRunner.asmdef using Guid(27619889b8ba8c24980f49ee34dbb44a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cc72419ab1198df33673865af686382') in 0.002160 seconds 
+  Import took 0.003712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.412516 seconds.
+  path: Packages/com.unity.test-framework/UnityEditor.TestRunner/UnityEditor.TestRunner.asmdef
+  artifactKey: Guid(0acc523941302664db1f4e527237feb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.test-framework/UnityEditor.TestRunner/UnityEditor.TestRunner.asmdef using Guid(0acc523941302664db1f4e527237feb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37b436c5b272fbb9cad20717b7382829') in 0.002125 seconds 
+  Import took 0.004140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.496632 seconds.
+  path: Packages/com.unity.test-framework/package.json
+  artifactKey: Guid(d6a2e6e4803de7b43baacdc355fc144d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.test-framework/package.json using Guid(d6a2e6e4803de7b43baacdc355fc144d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceca15118ea03e7ba9b0a601798f3381') in 0.021446 seconds 
+  Import took 0.024863 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000975 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.425 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 152.6 MB.
+System memory in use after: 152.7 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1845.
+Total: 1.355209 ms (FindLiveObjects: 0.093125 ms CreateObjectMapping: 0.026916 ms MarkObjects: 1.215667 ms  DeleteObjects: 0.018542 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001828 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.524 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.19 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 152.7 MB.
+System memory in use after: 152.8 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 1847.
+Total: 1.292375 ms (FindLiveObjects: 0.100958 ms CreateObjectMapping: 0.026875 ms MarkObjects: 1.140958 ms  DeleteObjects: 0.022625 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001708 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.557 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 153.0 MB.
+System memory in use after: 153.1 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1851.
+Total: 1.394000 ms (FindLiveObjects: 0.100250 ms CreateObjectMapping: 0.028000 ms MarkObjects: 1.244209 ms  DeleteObjects: 0.020375 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

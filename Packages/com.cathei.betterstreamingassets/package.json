@@ -1,0 +1,15 @@
+{
+  "name": "com.cathei.betterstreamingassets",
+  "displayName": "Better Streaming Assets",
+  "version": "1.0.0",
+  "unity": "2019.4",
+  "description": "Better Streaming Assets is a plugin that lets you access Streaming Assets directly in an uniform and thread-safe way, with tiny overhead. Mostly beneficial for Android projects, where the alternatives are to use archaic and hugely inefficient WWW or embed data in Asset Bundles. API is based on Syste.IO.File and System.IO.Directory classes.",
+  "license": "MIT",
+  "documentationUrl": "https://github.com/cathei/BetterStreamingAssets-Package",
+  "samples": [
+    {
+      "displayName": "Better Streaming Assets Samples",
+      "path": "Samples~/BetterStreamingAssets"
+    }
+  ]
+}
