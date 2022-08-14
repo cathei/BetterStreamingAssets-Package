@@ -1,0 +1,3 @@
+[submodule "Packages/com.cathei.betterstreamingassets"]
+	path = Packages/com.cathei.betterstreamingassets
+	url = git@github.com:cathei/BetterStreamingAssets-Package.git
