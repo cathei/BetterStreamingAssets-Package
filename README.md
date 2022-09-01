@@ -11,7 +11,7 @@ or for specific version, use tag.
 https://github.com/cathei/BetterStreamingAssets-Package.git#1.6.0
 ```
 
-You can also install it via OpenUPM.
+You can also install it via [OpenUPM](https://openupm.com/packages/com.cathei.betterstreamingassets/).
 ```
 openupm add com.cathei.betterstreamingassets
 ```
