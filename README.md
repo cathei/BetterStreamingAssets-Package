@@ -1,3 +1,20 @@
+# Better Streaming Assets (Unity Package)
+[![openupm](https://img.shields.io/npm/v/com.cathei.betterstreamingassets?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.cathei.betterstreamingassets/)
+
+To install, open `Package Manager` in Unity. Press + button and choose `Add package from git url...`. Then enter git address to this repository.
+```
+https://github.com/cathei/BetterStreamingAssets-Package.git
+```
+or for specific version, use tag.
+```
+https://github.com/cathei/BetterStreamingAssets-Package.git#1.6.0
+```
+
+You can also install it via [OpenUPM](https://openupm.com/packages/com.cathei.betterstreamingassets/).
+```
+openupm add com.cathei.betterstreamingassets
+```
+
 # Better Streaming Assets
 
 Better Streaming Assets is a plugin that lets you access Streaming Assets directly in an uniform and thread-safe way, with tiny overhead. Mostly beneficial for Android projects, where the alternatives are to use archaic and hugely inefficient WWW or embed data in Asset Bundles. API is based on Syste.IO.File and System.IO.Directory classes.
