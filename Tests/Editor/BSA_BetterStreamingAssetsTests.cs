@@ -9,11 +9,16 @@ using System.Linq;
 using System.IO;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using UnityEditor.Android;
+using System;
 
 namespace Better.StreamingAssets
 {
     [TestFixture("Assets/StreamingAssets", false)]
     [TestFixture("BetterStreamingAssetsTest.apk", true)]
+    [TestFixture("BetterStreamingAssetsTest_standalones_standalone-armeabi_v7a.apk", true)]
+    [TestFixture("BetterStreamingAssetsTest_splits_base-master.apk", true)]
+
     public class BetterStreamingAssetsTests
     {
         private const int SizesCount = 2;
@@ -24,10 +29,37 @@ namespace Better.StreamingAssets
         private const string TestPath = "Assets/StreamingAssets/" + TestDirName;
         private const string TestResourcesPath = "Assets/Resources/" + TestDirName;
         private const int TestFiles = SizesCount * 2 + SizesCount * 2 * BundlesTypesCount + TexturesCount * BundlesTypesCount + TexturesCount;
-
+        private readonly bool _apkMode;
         private static int[] SizesMB = new int[SizesCount] { 10, 50 };
         private static string[] BundlesLabels = new string[BundlesTypesCount] { "lzma", "lz4", "uncompressed" };
         private static BuildAssetBundleOptions[] BundlesOptions = new BuildAssetBundleOptions[BundlesTypesCount] { BuildAssetBundleOptions.None, BuildAssetBundleOptions.ChunkBasedCompression, BuildAssetBundleOptions.UncompressedAssetBundle };
+        
+        [MenuItem("Assets/Better Streaming Assets/Make Android Buld")]
+        public static void CreateAndroidBuild()
+        {
+            const string TestSceneGuid = "2bef88fd675ce3f4fa61ff5f18aa8242";
+
+            // find test scene
+            var path = AssetDatabase.GUIDToAssetPath(TestSceneGuid);
+            if (string.IsNullOrEmpty(path))
+            {
+                throw new System.InvalidOperationException($"Failed to find test scene by guid: {TestSceneGuid}");
+            }
+
+            // build
+            var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions()
+            {
+                scenes = new[] { path },
+                target = BuildTarget.Android,
+                targetGroup = BuildTargetGroup.Android,
+                locationPathName = "BetterStreamingAssetsTest.apk",
+            });
+
+            if (report.summary.result != UnityEditor.Build.Reporting.BuildResult.Succeeded)
+            {
+                throw new System.InvalidOperationException($"Build failed: {EditorJsonUtility.ToJson(report.summary)}");
+            }
+        }
 
         [MenuItem("Assets/Better Streaming Assets/Generate Test Data")]
         public static void GenerateTestData()
@@ -46,7 +78,7 @@ namespace Better.StreamingAssets
             {
                 var random = new System.Random(126556343);
                 long mb = 1024 * 1024;
-                foreach ( var size in SizesMB )
+                foreach (var size in SizesMB)
                 {
                     var p = "Assets/raw_compressable_" + size.ToString("00") + "mb.bytes";
                     paths.Add(p);
@@ -71,7 +103,7 @@ namespace Better.StreamingAssets
 
                     byte[] buffer = new byte[4];
 
-                    for ( int y = 0; y < tex.height; ++y )
+                    for (int y = 0; y < tex.height; ++y)
                     {
                         for (int x = 0; x < tex.width; ++x)
                         {
@@ -97,7 +129,7 @@ namespace Better.StreamingAssets
 
                 try
                 {
-                    for ( int i = 0; i < BundlesLabels.Length; ++i )
+                    for (int i = 0; i < BundlesLabels.Length; ++i)
                     {
                         // now create bundles!
                         var builds = paths.Select(x => new AssetBundleBuild()
@@ -110,7 +142,7 @@ namespace Better.StreamingAssets
                         BuildPipeline.BuildAssetBundles(tempDirPath, builds, BundlesOptions[i], BuildTarget.Android);
                     }
 
-                    foreach ( var file in Directory.GetFiles(tempDirPath).Where(x => Path.GetFileName(x).StartsWith("bundle_") && Path.GetExtension(x) != ".manifest") )
+                    foreach (var file in Directory.GetFiles(tempDirPath).Where(x => Path.GetFileName(x).StartsWith("bundle_") && Path.GetExtension(x) != ".manifest"))
                     {
                         File.Copy(file, Path.Combine(TestResourcesPath, Path.GetFileName(file) + ".bytes"));
                         File.Move(file, Path.Combine(TestPath, Path.GetFileName(file)));
@@ -123,10 +155,10 @@ namespace Better.StreamingAssets
                     Directory.Delete(tempDirPath, true);
                 }
 
-                foreach ( var p in paths )
+                foreach (var p in paths)
                 {
                     var extension = ".bytes";
-                    if ( Path.GetExtension(p) == ".png" )
+                    if (Path.GetExtension(p) == ".png")
                         extension = ".png";
                     File.Copy(p, Path.Combine(TestResourcesPath, Path.GetFileName(p) + extension));
                     File.Move(p, Path.Combine(TestPath, Path.GetFileName(p)));
@@ -143,6 +175,56 @@ namespace Better.StreamingAssets
             }
         }
 
+        [MenuItem("Assets/Better Streaming Assets/Generate Test Data (Wierd Names)")]
+        public static void GenerateWeirdNamesTestData()
+        { 
+            // now weird names
+            var parts = new[]
+            {
+                    "UCASCII",
+                    "lcascii",
+                    "UCNONASCII_Ą",
+                    "lcnonascii_ą",
+                    "UCĄ_NONASCII",
+                    "lcą_nonascii",
+                    "UCWITH.DOT",
+                    "lcwith.dot",
+                    "",
+                };
+
+            var extensions = new[]
+            {
+                    ".lc",
+                    ".UC",
+                    ".Mc",
+                    ".lcą",
+                    ".UCĄ",
+                    ""
+                };
+
+
+            foreach (var folder in parts)
+            {
+                foreach (var name in parts)
+                {
+                    if (string.IsNullOrEmpty(name))
+                        continue;
+
+                    foreach (var extension in extensions)
+                    {
+                        var path = Path.Combine("Assets/StreamingAssets/bsanametest", folder, name + extension);
+                        if (Directory.Exists(path))
+                        {
+                            path += name;
+                        }
+                        CreateZeroFile(path, 1024);
+                    }
+                }
+            }
+
+            AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport | ImportAssetOptions.ForceUpdate);
+        }
+
 
         [MenuItem("Assets/Better Streaming Assets/Delete Test Data")]
         public static void DeleteTestData()
@@ -155,10 +237,81 @@ namespace Better.StreamingAssets
             AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport | ImportAssetOptions.ForceUpdate);
         }
 
+        [MenuItem("Assets/Better Streaming Assets/Convert AAB to APKS")]
+        public static void ConvertAABToAPKS()
+        {
+            // find bundle tool
+            var bundleTool = Directory.GetFiles(Path.Combine(AndroidExternalToolsSettings.gradlePath, ".."), "bundletool*.jar").Single();
+            var paths = Directory.GetFiles(".", "*.aab");
+
+            try
+            {
+                foreach (var path in paths)
+                {
+                    if (EditorUtility.DisplayCancelableProgressBar($"AAB->APK", path, Array.IndexOf(paths, path) / (float)paths.Length))
+                    {
+                        break;
+                    }
+
+                    var outPath = $"{path}.apks";
+                    FileUtil.DeleteFileOrDirectory(outPath);
+
+                    var processStartInfo = new System.Diagnostics.ProcessStartInfo()
+                    {
+                        Environment = { { "JAVA_HOME", AndroidExternalToolsSettings.jdkRootPath } },
+                        CreateNoWindow = true,
+                        UseShellExecute = false,
+                        FileName = Path.Combine(AndroidExternalToolsSettings.jdkRootPath, "bin", "java.exe"),
+                        RedirectStandardOutput = true,
+                        RedirectStandardError = true,
+                        Arguments = $"-jar \"{bundleTool}\" build-apks --bundle {path} --output {outPath}"
+                    };
+
+                    var bundleToolProcess = System.Diagnostics.Process.Start(processStartInfo);
+                    bundleToolProcess.WaitForExit();
+
+                    if (bundleToolProcess.ExitCode != 0)
+                    {
+                        Debug.LogError($"Exit code {bundleToolProcess.ExitCode} for {path}:\n{bundleToolProcess.StandardOutput.ReadToEnd()}\n{bundleToolProcess.StandardError.ReadToEnd()}");
+                    }
+
+                    using (var archive = new System.IO.Compression.ZipArchive(File.OpenRead(outPath)))
+                    {
+                        foreach (var entry in archive.Entries)
+                        {
+                            if (entry.FullName.EndsWith(".apk", StringComparison.OrdinalIgnoreCase))
+                            {
+                                var apkPath = $"{Path.GetFileNameWithoutExtension(path)}_{entry.FullName.Replace('/', '_')}";
+                                FileUtil.DeleteFileOrDirectory(apkPath);
+                                using (var stream = entry.Open())
+                                {
+                                    using (var fileStream = File.Create(apkPath))
+                                    {
+                                        stream.CopyTo(fileStream);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            finally
+            {
+                EditorUtility.ClearProgressBar();
+            }
+        }
+
         public BetterStreamingAssetsTests(string path, bool apkMode)
         {
             if (apkMode && !File.Exists(path))
                 Assert.Inconclusive("Build for Android and name output: " + path);
+
+            _apkMode = apkMode;
+
+            BetterStreamingAssets.CompressedStreamingAssetFound += (path) =>
+            {
+                return path.Any(x => !IsAscii(x));
+            };
 
             if ( apkMode )
             {
@@ -177,7 +330,7 @@ namespace Better.StreamingAssets
 
             foreach (var size in SizesMB)
             {
-                foreach (var format in new[] { "raw_uncompressable_{0:00}MB.bytes", "raw_uncompressable_{0:00}MB.bytes" })
+                foreach (var format in new[] { "raw_uncompressable_{0:00}mb.bytes", "raw_uncompressable_{0:00}mb.bytes" })
                 {
                     var name = string.Format(format, size);
                     var referenceBytes = BetterStreamingAssets.ReadAllBytes(TestDirName + "/" + name);
@@ -211,6 +364,10 @@ namespace Better.StreamingAssets
             var files = GetRealFiles("/", null, SearchOption.AllDirectories);
             foreach (var f in files)
             {
+                if (IsPathExpectedToBeCompressedAnyway(f))
+                {
+                    continue;
+                }
                 var a = File.ReadAllBytes("Assets/StreamingAssets/" + f);
                 var b = BetterStreamingAssets.ReadAllBytes(f);
                 Assert.AreEqual(a.Length, b.Length);
@@ -244,6 +401,10 @@ namespace Better.StreamingAssets
             var files = GetRealFiles("/", null, SearchOption.AllDirectories);
             foreach (var f in files)
             {
+                if (IsPathExpectedToBeCompressedAnyway(f))
+                {
+                    continue;
+                }
                 using (var a = File.OpenRead("Assets/StreamingAssets/" + f))
                 using (var b = BetterStreamingAssets.OpenRead(f))
                 {
@@ -272,20 +433,55 @@ namespace Better.StreamingAssets
             var files = GetRealFiles("/", null, SearchOption.AllDirectories);
             foreach (var f in files)
             {
-                Assert.IsTrue(BetterStreamingAssets.FileExists(f));
+                if (IsPathExpectedToBeCompressedAnyway(f))
+                {
+                    Assert.IsFalse(BetterStreamingAssets.FileExists(f), f);
+                }
+                else
+                {
+                    Assert.IsTrue(BetterStreamingAssets.FileExists(f), f);
+                }
             }
 
             Assert.IsFalse(BetterStreamingAssets.FileExists("FileThatShouldNotExist"));
         }
 
+        private bool IsPathExpectedToBeCompressedAnyway(string path)
+        {
+            if (_apkMode)
+            {
+                var partToCheck = Path.GetExtension(path);
+                if (partToCheck.Length == 0)
+                {
+                    partToCheck = path;
+                }
+                if (partToCheck.Any(x => !IsAscii(x)))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        static bool IsAscii(char c)
+        {
+            return c >= 0 && c < 128;
+        }
+
         [TestCase("/", "*.lz4", SearchOption.AllDirectories, SizesCount * 2)]
         [TestCase(".", null, SearchOption.AllDirectories, TestFiles)]
         [TestCase("/", null, SearchOption.AllDirectories, TestFiles)]
-        [TestCase("Bundles", null, SearchOption.AllDirectories, 0)]
+        [TestCase("bsatest", null, SearchOption.AllDirectories, 0)]
+        [TestCase("bsatest/", null, SearchOption.AllDirectories, 0)]
+        [TestCase("bsatest/.", null, SearchOption.AllDirectories, 0)]
+        [TestCase("./bsatest/.", null, SearchOption.AllDirectories, 0)]
+        [TestCase("/./bsatest/.", null, SearchOption.AllDirectories, 0)]
+        [TestCase("/bsatest/.", null, SearchOption.AllDirectories, 0)]
         [TestCase("///////", null, SearchOption.AllDirectories, TestFiles)]
         [TestCase("/.", null, SearchOption.AllDirectories, TestFiles)]
         [TestCase("/./././", null, SearchOption.AllDirectories, TestFiles)]
-        [TestCase("Bundles/../Bundles", null, SearchOption.AllDirectories, 0)]
+        [TestCase("bsatest/../bsatest", null, SearchOption.AllDirectories, 0)]
         public void TestFileListInProjectMatchesStreamingAssets(string dir, string pattern, SearchOption opt, int minCount)
         {
             NeedsTestData();
@@ -321,21 +517,16 @@ namespace Better.StreamingAssets
 
         private void TestGetFiles(string dir, string pattern, SearchOption opt, int minCount, int maxCount)
         {
-            var files = GetRealFiles(dir, pattern, opt);
+            var files = GetRealFiles(dir, pattern, opt)
+                .Where(x => !IsPathExpectedToBeCompressedAnyway(x))
+                .ToArray();
+
             var otherFiles = BetterStreamingAssets.GetFiles(dir, pattern, opt);
 
             System.Array.Sort(files);
             System.Array.Sort(otherFiles);
 
-            Assert.AreEqual(files.Length, otherFiles.Length);
-
-            Assert.GreaterOrEqual(files.Length, minCount);
-            Assert.LessOrEqual(files.Length, maxCount);
-
-            for (int i = 0; i < files.Length; ++i)
-            {
-                Assert.AreEqual(files[i], otherFiles[i]);
-            }
+            CollectionAssert.AreEqual(files, otherFiles);
         }
 
         private static string[] GetRealFiles(string nested, string pattern, SearchOption so, bool dirs = false)
@@ -400,6 +591,11 @@ namespace Better.StreamingAssets
 
         private static void CreateZeroFile(string path, long size)
         {
+            var dir = Path.GetDirectoryName(path);
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
             File.WriteAllBytes(path, new byte[size]);
         }
 
